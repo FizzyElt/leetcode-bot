@@ -1,7 +1,10 @@
 import { Interaction, CacheType, Client, Awaitable } from 'discord.js';
-
+import { Effect } from 'effect';
+import { commandOperation } from '../tasks/command_operation';
 export default function interaction(interaction: Interaction<CacheType>): Awaitable<void> {
   if (!interaction.isCommand()) return;
 
-  interaction.reply('我現在它媽只會說嗨');
+  const program = commandOperation(interaction);
+
+  Effect.runPromise(program);
 }

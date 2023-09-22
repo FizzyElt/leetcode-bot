@@ -7,4 +7,4 @@ const program = pipe(
   Effect.flatMap((data) => Console.log(data))
 );
 
-Effect.runPromise(program);
+Effect.runPromise(loginClient(client));

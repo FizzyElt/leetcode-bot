@@ -22,7 +22,7 @@ export type Problem = {
 
 export type Problems = Array<Problem>;
 
-export const fetchProblemsList = (name: ProblemCollection) =>
+export const fetchProblemsList = (name: string) =>
   Effect.tryPromise<Problems, Error>({
     try: () =>
       fs
