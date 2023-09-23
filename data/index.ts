@@ -28,7 +28,7 @@ const createLoadData =
   };
 
 const convertRow = (row: unknown[]) => {
-  const [id = '0', title = '', difficulty = ''] = row;
+  const [id = '0', difficulty = '', title = ''] = row;
 
   return {
     id: parseInt(id as string),
