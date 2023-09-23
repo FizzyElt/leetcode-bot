@@ -8,7 +8,7 @@
     "start": "ts-node index.ts",
     "node": "ts-node",
     "create": "ts-node ./slash_command/index.ts",
-    "flow": "ts-node ./slash_command/index.ts && ts-node ./data/index.ts && ts-node index.ts"
+    "flow": " ts-node ./data/index.ts && ts-node ./slash_command/index.ts && ts-node index.ts"
   },
   "engines": {
     "node": ">=18.18.0"
