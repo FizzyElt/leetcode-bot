@@ -1,0 +1,9 @@
+version: '1'
+
+services:
+  app:
+    build: .
+    image: leetcode-bot
+    container_name: leetcode-bot
+    env_file:
+      - .env
